@@ -18,12 +18,24 @@
 // console.log("myName", myName);
 // console.log("null type " + typeof myName);
 
-//4. what is Nan
-// Not-a-Number.
-var myNo = 1234567890;
-var myAdd = "pune";
-console.log("subtraction is" + myNo - myAdd);
+// //4. what is Nan
+// //1.  Not-a-Number.
+// var myNo = 1234567890;
+// var myAdd = "pune";
+// console.log("subtraction is" + myNo - myAdd);
 
-// 2.
-var myName = 'vishal';
-var
+// // 2.
+// var myName = "vishal";
+// var myName1 = "shinde";
+// console.log("output is" + myName - myName1);
+// // 3.
+// var myNo = 12345678;
+// var name = "abc";
+// console.log(isNaN(myNo)); // false it check is not a number
+// console.log(isNaN(name)); // true it check it is not number return true because it is a not a number.
+
+// NAN number challenges.
+console.log(NaN === NaN); // false
+console.log(Number.NaN === NaN); // false
+console.log(isNaN(NaN));  // true
+console.log(isNaN (Number.NaN)) // true
