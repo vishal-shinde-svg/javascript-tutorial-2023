@@ -19,6 +19,7 @@
 // console.log("null type " + typeof myName);
 
 // //4. what is Nan
+
 // //1.  Not-a-Number.
 // var myNo = 1234567890;
 // var myAdd = "pune";
@@ -28,6 +29,7 @@
 // var myName = "vishal";
 // var myName1 = "shinde";
 // console.log("output is" + myName - myName1);
+
 // // 3.
 // var myNo = 12345678;
 // var name = "abc";
