@@ -347,3 +347,101 @@
 // console.log('data', data);
 // console.log('array original array', array);
 
+// example of map (used callback function..)
+// const array = [1, 4, 5, 3, 8, 9, 33, 0, 6];
+// let newArr = array.map((ele, index, arr) => {
+
+//     return `then index no of of element ${index} related to the element ${ele} and belongs to the ${arr}`;
+// })
+// console.log('newArr', newArr)
+
+
+// what is differences between forEach method and map method.
+// forEach()
+// const array = [1, 4, 5, 3, 8, 9, 33, 0, 6];
+// const newArray = array.forEach((e) => {
+//     console.log("element", e); // forEach used to loop through the element of the array
+//     return e;
+// })
+// console.log("newArray", newArray); // it return undefined
+
+
+// Map
+// const array = [1, 4, 5, 3, 8, 9, 33, 0, 6];
+// const newArray = array.map((ele, index, array) => {
+//     console.log("element", ele); // forEach used to loop through the element of the array
+//     return ele > 3
+
+// })
+//     .filter((element, index) => {
+//         return element % 2;
+//     })
+// console.log("newArray", newArray); // it return undefined
+
+
+// // Q find the square root of each element in an array
+// const array = [1, 4, 5, 3, 8, 9, 33, 0, 6]
+// const newArr = array.map((ele, index, array) => {
+//     return Math.sqrt(ele);
+
+// })
+// console.log('square root of the each element', newArr);
+
+
+// //  Q. multiple each element by 2 and return only those element which is grater then 10;
+// const array = [1, 4, 5, 3, 8, 9, 33, 0, 6];
+// const newArr = array.map((ele,) => {
+//     return ele * 2
+// }).filter((element) => {
+//     return element > 10;
+// })
+// console.log('multiplication ', newArr);
+
+// *25  reduce() method.
+// def: the reduce method execute user supplied reducer callback function of each and every element of the array in order passing
+// in the return value form calculation on the preceding element.
+//  and the final result running reducer access all element of the array in single value.
+
+// argument in reducer method()
+// accumulator 2. current value  3.current index, 4. source array.
+
+// const array = [1, 4, 5, 3, 8, 9, 33, 0, 6];
+// const newarray = array.map((element) => {
+//     debugger;
+//     return element * 2
+
+// }).filter((ele) => {
+//     return ele * 2
+// }).reduce((accumulater, currentValue, index, arr) => {
+//     return accumulater += currentValue;
+// })
+// console.log('newarray', newarray);
+
+// //  in accumulate having default value in reduce method
+// const array = [1, 4, 5, 3, 8, 9, 33, 0, 6];
+// const newarray = array.map((element) => {
+//     debugger;
+//     return element * 2
+
+// }).filter((ele) => {
+//     return ele * 2
+// }).reduce((accumulater, currentValue, index, arr) => {
+//     return accumulater += currentValue;
+// }, 7)   // Here you have to defined the 7 as default value and start execution from 7 and
+// // remaining element of the array.
+// console.log('newarray', newarray);
+
+
+// How to flatten an array
+// i.e converting 2d or 3d array into one dimensional array.
+const arr = [
+    ['zone-1', 'zone-2'],
+    ['zone-2', 'zone-3'],
+    ['zone-5', 'zone-6']
+    , ['zone-6', 'zone-8']
+]
+
+let flatten = arr.reduce((acum, currentEle) => {
+    return acum.concat(currentEle);
+})
+console.log('flatten', flatten);
