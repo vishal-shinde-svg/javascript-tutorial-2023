@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click on button and set the time </title>
+</head>
+<body>
+
+    <p>click the button to display date after changing </p>
+    <button onclick="myFunction()"> click me </button>
+
+    <p id="time"> </p>
+    <p id="date"> </p>
+
+    <script>
+// function myFunction(){
+//     var t = new Date();
+//     t.setHours(5);
+//     document.getElementById('demo').innerHTML=t
+// }
+
+const t = new Date().toLocaleTimeString();
+document.getElementById("time").innerHTML = t;
+
+const d = new Date().toLocaleDateString();
+document.getElementById("date").innerHTML = d;
+
+
+    </script>
+    
+</body>
+</html>

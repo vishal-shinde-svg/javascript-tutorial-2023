@@ -29,3 +29,30 @@ a = a / b;  // 800/20 --> 40
 console.log(
   `another way after swapping the number value of a${a} and value of b ${b}`
 );
+
+
+// write a program that work out weather if a given year is leap year or not
+// leaf year having 366 day.(leaf year exactly divided by 4   also divided by 400
+//  expect it divided by 100 then it is not leaf year)
+
+var year = 2021;
+if (year % 4 === 0 && year % 400 === 0) {
+
+  if (year % 100 !== 0) {
+    console.log('given year not leaf year......')
+  }
+  else {
+    console.log('given year is leaf year')
+  }
+} else {
+  console.log('given year is  not leaf year')
+}
+
+// javascript program to print table for given number (8,9,12,15) using for loop
+
+var num = 8;
+for (var i = 0; i <= 10; i++) {
+  // console.log(`the table of 8 is ${num * i}  `)
+  console.log('table of ' + "=" + num  + '=' + num * i )
+}
+
