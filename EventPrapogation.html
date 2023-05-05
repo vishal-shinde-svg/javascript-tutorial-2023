@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="praentDiv" id="parentId"> hi
+        <div class="childDiv" id="childId">hello</div>
+    </div>
+    <script>
+            const parentId = document.getElementById('parentId');
+            const childId = document.getElementById('childId');
+
+            const parentCall = () =>{
+                alert('parent Div call');
+                // console.log('parenet div call')
+            }
+
+            const childCall = () =>{
+                alert('childe div call');
+                // console.log('child div call');
+                // if you want to stop event prpogation so you have to used event.stopPrapogation
+                event.stopPropagation();
+            }
+            // by default it contain bubbling phase
+            parentId.addEventListener('click', parentCall , false);
+            childId.addEventListener('click',childCall,false);
+
+              // it contain caputre phase
+              parentId.addEventListener('click', parentCall , true);
+            childId.addEventListener('click',childCall,true);
+    </script>
+    
+</body>
+</html>
