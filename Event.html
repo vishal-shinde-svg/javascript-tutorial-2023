@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <h1>Different Event type in javascript...</h1>
+        <div class="button_container">
+            <div class="button_su">
+                <span class="su_button_circle"></span>
+                <a href="#" class="button_su_inner" onclick="alert('Hi welcome to the javascript')">
+                    <span class="button_text_container">Simple inline alert() 
+
+                    </span>
+                </a>
+            </div>
+            <div class="button_su">
+                <span class="button_su_circle"></span>
+                <!-- we need to pass parenthesis in onclick function by calling a function -->
+                <a href="#" class="button_su_inner" onclick="onChange()">   
+                    <span class="button_text_container">By calling a function()</span>
+                </a>
+            </div>
+
+            <script>
+                const onChange = () =>{
+                alert('most comman way to writing by calling function.....')
+                }
+            </script>
+
+
+            <div class="button_su">
+                <span class="button_su_circle"></span>
+                <!-- we need to pass parenthesis in onclick function by calling a function -->
+                <!-- in inlie event if you defined same event again it override the evet and it show last updated event -->
+                <!-- in this inline event no need to write event you defined event in calling function it give the refrences of id,class
+                to perform event by uisng refrences method like getElementById , and getElementByclassName and etc... -->
+                <a href="#" class="button_su_inner" ">   
+                    <span class="button_text_container" id="thirdWay">
+                        inline Event
+
+                    </span>
+                </a>
+            </div>
+            <script> //  3rd way to writing the functions.....
+            const thirdWay = document.getElementById('thirdway');
+            thirdWay.onclick = function(){
+            alert("hi, this is third way to writing the event in html");
+            }
+            // same event defined it override the event.and show bottom of the event.
+            thirdWay.onclick = function(){
+            alert("hi, this is third way to writing the event in html");
+            }
+            </script>
+            <div class="button_su">
+                <span class="button_su_circle"></span>
+                <!-- we need to pass parenthesis in onclick function by calling a function -->
+                <!-- by using addEventListner you have to call same event multiple time so it not override the same event -->
+                <!-- also here no need to defined event by using refrenes you have to defined the event in the  addEventListner. -->
+                <a href="#" class="button_su_inner" ">   
+                    <span class="button_text_container" id="forthWay">
+                        Event Listner 
+
+                    </span>
+                </a>
+            </div>
+            <script>
+            //  3rd way to writing the functions.....
+        const forthWay = document.querySelector('#forthWay');
+        forthWay.addEventListener('click', ()=>{
+        alert('also this is awosam way to write event ')
+        })
+        // same event defined again and again. it not ovrride
+        forthWay.addEventListener('click', ()=>{
+        console.log('also this is awosam way to write event ');
+        })
+        </script>
+            
+        </div>
+    </div>
+
+   
+</body>
+</html>

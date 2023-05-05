@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-div">
+
+        <div>
+<label for="">your Name :</label>
+<input type="text" name="" id="ice">
+            <br>
+            <label for="">Choose an icecream flavor
+            <select name="icecream" id="icecream">
+             <!-- onchange="selectElement()"> -->
+            <option value="">Select one</option>
+            <option value="choclate">choclate</option>
+            <option value="sardine">sardine</option>
+            <option value="vanila">vanila</option>
+            </select>
+        </label>
+        <br>
+        <div id="result"></div>
+        </div>
+    </div>
+
+<script>
+// const selectElement = () =>{
+//     const inputchange = document.getElementById('ice').value;
+//     const changeselect = document.getElementById('icecream').value;
+//     const result = document.getElementById('result').innerHTML = 
+//     ` mr ${inputchange} selected  ${changeselect} flavour`
+    
+// }
+
+// using refrences with addEventListner
+
+const changeselect = document.getElementById('icecream');
+changeselect.addEventListener('change', () => {
+    const inputchange = document.getElementById('ice').value;
+    const changeselect = document.getElementById('icecream').value;
+    const result = document.getElementById('result').innerHTML = 
+    ` mr ${inputchange} selected  ${changeselect} flavour`
+    
+})
+
+</script>
+
+</body>
+</html>

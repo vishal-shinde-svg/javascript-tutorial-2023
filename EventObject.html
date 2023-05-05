@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <h1>let see what is event object....</h1>
+        <div class="button_su">
+            <span class="su_button_circle"></span>
+            <a href="#" class="button_su_inner" id="main">
+                <span class="button_text_container">
+                    Event Listner
+                </span>
+            </a>
+        </div>
+    </div>
+    <script>
+        // to get all information about the event we can them used event object
+        const main = document.getElementById('main');
+        const changeEvent = () =>{
+            alert('we have to see Event Object')
+            console.log(event);
+            console.log(event.target);
+            console.log(event.type);
+        }
+        main.addEventListener('click',changeEvent);
+
+    </script>
+    
+</body>
+</html>

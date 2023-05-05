@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="para">please like the video</p>
+    <p class="para">please Share this video</p>
+    <p>Dont forget subscribed my chanel..</p>
+    <h1 id="heading"> change the content of the h1</h1>
+    <button onclick="changeContent()">click me</button>
+
+
+<!-- form  -->
+
+<label for="">male</label>
+<input type="radio" name="Gender" id="">
+<label for="">female</label>
+<input type="radio" name="Gender" id="">
+<label for="">maleFemale</label>
+<input type="radio" name="Gender" id="">
+
+<!-- <script>
+console.log(document.getElementsByName('Gender'));
+
+
+</script> -->
+
+<script>
+    const changeContent = () => {
+
+console.log(document.querySelectorAll ('.para'))
+//quearySelectorAll is used to display how many total content having.
+    }
+</script>   
+
+
+
+
+    <!-- it is used for tha className -->
+    <!-- <script>
+        const chageContent = () =>{
+            // document.getElementById('heading').innerHTML ='welcome to javascript Dom';        }
+            // also you have to done with the help of refrences heading object here
+    const headingChange = document.getElementById('heading');
+    headingChange.innerHTML = 'welcome to java script'
+        }
+    </script> -->
+
+<!-- if you want to deal with class name used getElemetByClassName  -->
+<!-- <script>
+const changeContent = () => {
+    console.log(document.getElementsByClassName('para'));
+    document.getElementsByClassName('para').innerHtml = document.body.style.color = 'red';
+}
+</script> -->
+
+
+<!-- if you deal with the tag name used fetElementByTagName -->
+<!-- <script>
+    const changeContent = () =>{
+       console.log( document.getElementsByTagName('p')); 
+       document.getElementsByTagName('p').innerHtml = "welcome";
+    }
+</script> -->
+
+
+<!-- <script>
+    const changeContent = () => {
+
+document.querySelector('.para').innerHTML ='i change behaviour again.'
+// it return chage the behaviour of first matching.
+    }
+</script> -->
+
+
+
+
+</body>
+</html>
